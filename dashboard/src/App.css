@@ -137,14 +137,15 @@ form .form-group span {
 }
 form .form-group input {
   padding: 8px 5px;
-  border: 1px solid #5e5a5a4f;
+  border: 2px solid #eee;
+  
   outline: none;
   color: var(--color4);
   border-radius: 5px;
 }
 
 .form-group input:active ,.form-group input:focus {
-  border: 1px solid var(--color2);
+  border: 2px solid var(--color2);
 }
 
 form input.btn-principal, .btn-principal {
