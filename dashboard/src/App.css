@@ -19,12 +19,14 @@ h1,h2,h3,h4,h5,h6{
   font-weight: 500;
 }
 header.fixed_header {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   padding: 0 3%;
   align-items: center;
   background: var(--bg_color);
   height: 80px;
+  z-index: 9;
   width: 100%;
 }
 p.full_name {
@@ -41,7 +43,7 @@ span.statu {
   width: 250px;
   height: 100vh;
   display: block;
-  padding:  10px 0px 20px 20px;
+  padding:  90px 0px 20px 20px;
   z-index: 1;
 }
 .left-aside p{
@@ -96,7 +98,7 @@ span.statu {
 .content {
   display: block;
   position: relative;
-  padding: 20px 20px 0 270px;
+  padding: 100px 20px 40px 270px;
   margin: 0;
 }
 h2.main-title {
@@ -138,6 +140,7 @@ form .form-group input {
   border: 1px solid #5e5a5a4f;
   outline: none;
   color: var(--color4);
+  border-radius: 5px;
 }
 
 .form-group input:active ,.form-group input:focus {
@@ -151,10 +154,11 @@ form input.btn-principal {
   color: var(--color1);
   transition: all .3s linear;
   cursor: pointer;
+  border-radius: 5px;
 }
 form input.btn-principal:hover{
   border-color: var(--color3);
-  background: var(--color3);
+  background: #3e86d4d6;
 }
 
 /******* Leads *******/
@@ -198,19 +202,22 @@ form input.btn-principal:hover{
 .leads-nav {
   display: block;
   position: relative;
-  padding: 20px 0;
+  padding: 20px 0 10px;
 }
 .leads-nav ul {
   list-style: none;
   display: flex;
   gap: 10px;
 }
-.leads-nav ul li a {
+.leads-nav ul li a, .pagination li{
   color: var(--color1);
   background: var(--color2);
   padding: 5px 10px;
   border-radius: 5px;
   text-decoration: none;
+}
+.leads-nav ul li:hover a, .pagination li:hover {
+  background: #3e86d4d6;
 }
 .leads-table table{
   width: 100%;
@@ -251,4 +258,23 @@ span.l-two {
 
 .l-btns svg{
   color: var(--color1);
+}
+
+/**** leads pagination ******/
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination li {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination .active {
+  font-weight: bold;
+}
+li.previous.disabled ,li.next.disabled {
+  cursor: not-allowed;
 }
