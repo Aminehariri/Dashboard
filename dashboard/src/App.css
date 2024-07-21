@@ -17,7 +17,12 @@
 h1,h2,h3,h4,h5,h6{
   font-family: var(--font1);
   font-weight: 500;
+  margin-bottom: 40px;
 }
+p{
+  margin-bottom: 10px;
+}
+/**** header ***/
 header.fixed_header {
   position: fixed;
   display: flex;
@@ -28,6 +33,10 @@ header.fixed_header {
   height: 80px;
   z-index: 9;
   width: 100%;
+}
+header p{
+  padding: 0;
+  margin: 0;
 }
 p.full_name {
   font-size: 20px;
@@ -46,6 +55,7 @@ span.statu {
   padding:  90px 0px 20px 20px;
   z-index: 1;
 }
+
 .left-aside p{
   position: relative;
   font-size: 18px;
@@ -55,6 +65,7 @@ span.statu {
   color: var(--color2);
   text-transform: uppercase;
   font-weight: 500;
+  margin: 0;
 }
 .left-aside p::after{
   position: absolute;
@@ -93,7 +104,44 @@ span.statu {
   transform: translateY(-50%);
 }
 
+/****** Welcome page *******/
+
+.welcome-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+.cta{
+  display: block;
+  position: relative;
+  margin: 20px 0;
+
+}
+.welcome-box img {
+  height: auto;
+  width: 350px;
+}
+.welcome-box .one {
+  width: 40%;
+  height: auto;
+}
+.two {
+  display: block;
+  padding: 20px 10px;
+  background: var(--color2);
+  color: var(--color1);
+  /* text-align: center; */
+  border-radius: 10px;
+  box-shadow: 1px -2px 12px -1px #3e86d48f;
+}
+.cta a.btn-principal {
+  border: 1px solid var(--color1);
+}
 /*************/
+
+
 
 .content {
   display: block;
@@ -104,7 +152,6 @@ span.statu {
 h2.main-title {
   display: block;
   position: relative;
-  margin-bottom: 40px;
   font-size: 25px;
   color: var(--color2);
 }
@@ -148,7 +195,7 @@ form .form-group input {
   border: 2px solid var(--color2);
 }
 
-form input.btn-principal, .btn-principal {
+form input.btn-principal, .btn-principal , .btn-principal a{
   position: relative;
   width: fit-content;
   padding: 7px 13px;
@@ -158,6 +205,7 @@ form input.btn-principal, .btn-principal {
   cursor: pointer;
   border-radius: 5px;
   border: none;
+  text-decoration: none;
   margin: 5px 10px 0 0;
 }
 form input.btn-principal:hover ,.btn-principal:hover{
@@ -264,7 +312,6 @@ span.l-two {
   color: var(--color1);
 }
 
-/**** leads pagination ******/
 .pagination {
   display: flex;
   list-style: none;

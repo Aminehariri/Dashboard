@@ -12,7 +12,7 @@ import Leads from './components/pages/Leads.jsx';
 import Stats from './components/pages/Stats.jsx';
 import Setting from './components/pages/Setting.jsx';
 import Welcome from './components/Welcome.jsx'
-
+import Profile from './components/pages/Profile.jsx';
 
 
 const App = () => {
@@ -26,8 +26,8 @@ const App = () => {
         <Header />
         <Aside />
         <div className="content">
-
           <Routes>
+            <Route path="/" element={<Welcome />} />
             <Route path="/leads" element={<Leads />} />
             <Route path="/stats" element={<Stats />} />
             <Route path="/setting" element={<Setting />} />
@@ -36,6 +36,7 @@ const App = () => {
             <Route path="/services" element={<Services />} />
             <Route path="/galerie" element={<Galerie />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/profile" element={<Profile />} />
             
           </Routes>
         </div>

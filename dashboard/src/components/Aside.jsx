@@ -23,7 +23,7 @@ export default function Aside(){
         </ul>   
       <p className="">Autres</p>
       <ul>
-        <li>Profile</li>
+      <li><NavLink to="/profile">Profile</NavLink></li>
         <li>FAQ</li>
         <li>Condition general</li>
       </ul>
